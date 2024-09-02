@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
     private bool isInvincible = false;
+    private bool canDestroyObjects = false;
 
     private void Awake()
     {
@@ -22,10 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartInvincibility(float duration)
     {
-        if (!isInvincible)
-        {
-            StartCoroutine(InvincibilityCoroutine(duration));
-        }
+        StartCoroutine(InvincibilityCoroutine(duration));
     }
 
     private IEnumerator InvincibilityCoroutine(float duration)
@@ -33,25 +30,35 @@ public class PlayerController : MonoBehaviour
         isInvincible = true;
         Debug.Log("Player is now invincible!");
 
-        // Optionally, change player appearance to indicate invincibility
-        // GetComponent<Renderer>().material.color = Color.yellow;
-
         yield return new WaitForSeconds(duration);
 
         isInvincible = false;
         Debug.Log("Player is no longer invincible.");
+    }
 
-        // Revert player appearance back to normal
-        // GetComponent<Renderer>().material.color = Color.white;
+    public void EnableObjectDestruction(float duration)
+    {
+        StartCoroutine(ObjectDestructionCoroutine(duration));
+    }
+
+    private IEnumerator ObjectDestructionCoroutine(float duration)
+    {
+        canDestroyObjects = true;
+        Debug.Log("Player can now destroy dangerous objects!");
+
+        yield return new WaitForSeconds(duration);
+
+        canDestroyObjects = false;
+        Debug.Log("Player can no longer destroy objects.");
+    }
+
+    public bool CanDestroyObjects()
+    {
+        return canDestroyObjects;
     }
 
     public bool IsInvincible()
     {
         return isInvincible;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Collision logic as previously defined
     }
 }
