@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     private Score ScoreText;
+    private SoundEffectManager soundEffectManager; // Reference to the SoundEffectManager
 
     private void Start()
     {
         ScoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
+
+        soundEffectManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundEffectManager>();
+
     }
 
     private void Update()
@@ -19,15 +20,18 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ScoreText.ScorePlusOne();
-        Destroy(gameObject);
-
         if (other.CompareTag("Player"))
         {
+            ScoreText.ScorePlusOne();
             ProgressBar.instance.CollectCoin();
+
+            // Play coin sound effect
+            if (soundEffectManager != null)
+            {
+                soundEffectManager.PlayCoinSound();
+            }
+
             Destroy(gameObject); // Destroy the coin after collection
         }
     }
-
-
 }

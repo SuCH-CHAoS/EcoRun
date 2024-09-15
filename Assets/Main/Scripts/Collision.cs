@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Collision : MonoBehaviour
 {
+    public GameObject gameOverUI; // Reference to the Game Over screen UI
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DangerousObject"))
@@ -15,13 +17,20 @@ public class Collision : MonoBehaviour
             }
             else if (!PlayerController.instance.IsInvincible())
             {
-                // Reset the "Main" scene if the player is not invincible
-                SceneManager.LoadScene("Main");
+                // Show the game over screen if the player is not invincible
+                TriggerGameOver();
             }
             else
             {
                 Debug.Log("Player is invincible. Scene loading blocked.");
             }
         }
+    }
+
+    // Method to trigger game over
+    void TriggerGameOver()
+    {
+        Time.timeScale = 0f; // Stop the game
+        gameOverUI.SetActive(true); // Display the Game Over screen
     }
 }
