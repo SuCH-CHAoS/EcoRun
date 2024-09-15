@@ -8,7 +8,9 @@ public class Coin : MonoBehaviour
     private void Start()
     {
         ScoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
+
         soundEffectManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundEffectManager>();
+
     }
 
     private void Update()

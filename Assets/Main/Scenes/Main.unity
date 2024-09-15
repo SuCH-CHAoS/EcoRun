@@ -27,6 +27,7 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 39d27e80110a983468075fd1868610d7, type: 2}
+
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1264,7 +1265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tile1: {fileID: 5371388168229630973, guid: 53d3d801845d0fd408c2bc532629d6b5, type: 3}
-  Tile2: {fileID: 5371388168229630973, guid: 7453f84e33ba51c449ae9e76bac21348, type: 3}
+  Tile2: {fileID: 5371388168229630973, guid: 7453f84e33ba51c449ae9e76bac21348, 
   StartTile: {fileID: 5371388168229630973, guid: 4369e32d29691fa4bb3f8f0376250c3d, type: 3}
 --- !u!4 &1366496884
 Transform:

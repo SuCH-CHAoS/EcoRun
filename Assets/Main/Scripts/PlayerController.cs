@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         playerRenderer = GetComponent<Renderer>();

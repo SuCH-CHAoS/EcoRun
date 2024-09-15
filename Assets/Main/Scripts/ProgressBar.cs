@@ -39,7 +39,7 @@ public class ProgressBar : MonoBehaviour
     public void CollectCoin()
     {
         if (isBarDecreasing) return; // Prevent increasing the bar if it's in the decreasing phase
-
+        
         coinsCollected++;
         coinsCollected = Mathf.Clamp(coinsCollected, 0, totalCoins);
 
@@ -55,6 +55,7 @@ public class ProgressBar : MonoBehaviour
             OnProgressBarFull();
         }
     }
+
 
     private void OnProgressBarFull()
     {
