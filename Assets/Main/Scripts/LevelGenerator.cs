@@ -20,8 +20,6 @@ public class LevelGenerator : MonoBehaviour
         StartPlane3.transform.position = new Vector3(-9, 0, 0);
         GameObject StartPlane4 = Instantiate(StartTile, transform);
         StartPlane4.transform.position = new Vector3(-17, 0, 0);
-        GameObject StartPlane5 = Instantiate(StartTile, transform);
-        StartPlane5.transform.position = new Vector3(-25, 0, 0);
     }
 
     private void Update()

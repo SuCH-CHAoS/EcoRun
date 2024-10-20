@@ -610,7 +610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 37.4, y: 93.2}
+  m_AnchoredPosition: {x: 63, y: 374}
   m_SizeDelta: {x: 413.46545, y: 387.83362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606641560
@@ -635,7 +635,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 90
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -819,7 +819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your Dead And Filed To Collect The Clean Air !
+  m_Text: You Died And Failed To Collect The Clean Air !
 --- !u!222 &737307868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1651,8 +1651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39, y: -152}
-  m_SizeDelta: {x: 50, y: 200}
+  m_AnchoredPosition: {x: 58.395813, y: -480.4779}
+  m_SizeDelta: {x: 88.7916, y: 343.0442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1728503208
 MonoBehaviour:
@@ -1811,8 +1811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39, y: -152}
-  m_SizeDelta: {x: 40, y: 190}
+  m_AnchoredPosition: {x: 58.395813, y: -480.4779}
+  m_SizeDelta: {x: 71.0333, y: 325.892}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
