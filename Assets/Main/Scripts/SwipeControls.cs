@@ -47,14 +47,14 @@ public class SwipeControls : MonoBehaviour
     public void UpdateKeyboardInput()
     {
         // Check if the A key is pressed (left swipe)
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             swipeLeft = true;
             Debug.Log("Swiped Left (A Key)");
         }
 
         // Check if the D key is pressed (right swipe)
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             swipeRight = true;
             Debug.Log("Swiped Right (D Key)");

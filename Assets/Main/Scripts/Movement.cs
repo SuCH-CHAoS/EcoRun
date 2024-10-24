@@ -19,21 +19,21 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         // Move the player between lanes based on their current position
-        if (Lane3 && Player.position.z < 1.1f)
+        if (Lane3 && Player.position.x < 1.1f)
         {
-            Player.position += new Vector3(0, 0, 10.5f * Time.deltaTime);
+            Player.position += new Vector3(10.5f * Time.deltaTime, 0, 0);
         }
-        else if (Lane1 && Player.position.z > -1.1f)
+        else if (Lane1 && Player.position.x > -1.1f)
         {
-            Player.position += new Vector3(0, 0, -10.5f * Time.deltaTime);
+            Player.position += new Vector3(-10.5f * Time.deltaTime, 0, 0);
         }
-        else if (Lane2 && Player.position.z <= -0.1f)
+        else if (Lane2 && Player.position.x <= -0.1f)
         {
-            Player.position += new Vector3(0, 0, 10.5f * Time.deltaTime);
+            Player.position += new Vector3(10.5f * Time.deltaTime,0, 0);
         }
-        else if (Lane2 && Player.position.z >= 0.1f)
+        else if (Lane2 && Player.position.x >= 0.1f)
         {
-            Player.position += new Vector3(0, 0, -10.5f * Time.deltaTime);
+            Player.position += new Vector3(-10.5f * Time.deltaTime, 0, 0);
         }
 
         // Change lane based on swipe input from the controls (A and D keys)
