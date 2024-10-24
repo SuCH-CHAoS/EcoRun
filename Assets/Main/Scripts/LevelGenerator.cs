@@ -21,7 +21,7 @@ public class LevelGenerator : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         gameObject.transform.position += new Vector3(0, 0, 4 * Time.deltaTime);
 
