@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.50499904, g: 0.59274656, b: 0.6151627, a: 1}
+  m_IndirectSpecularColor: {r: 0.5048852, g: 0.5922587, b: 0.61533225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -534,8 +534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 811, y: -404}
-  m_SizeDelta: {x: 730.3243, y: 189.0693}
+  m_AnchoredPosition: {x: -295, y: -1043}
+  m_SizeDelta: {x: 1241.5554, y: 444.6844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &560516406
 MonoBehaviour:
@@ -954,8 +954,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1106,7 +1106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0.706604}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0.70654297}
   m_SizeDelta: {x: 14.3954, y: 12.9824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028291363
@@ -1497,8 +1497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 811, y: -404}
-  m_SizeDelta: {x: 730.3243, y: 189.0693}
+  m_AnchoredPosition: {x: 0.00012207, y: -618.7352}
+  m_SizeDelta: {x: 1173.7671, y: 401.1502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355857729
 MonoBehaviour:
@@ -1904,7 +1904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0.706604}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0.70654297}
   m_SizeDelta: {x: 14.395, y: 12.982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2019572110
@@ -1991,8 +1991,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
