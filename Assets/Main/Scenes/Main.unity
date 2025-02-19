@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5049956, g: 0.592747, b: 0.6151627, a: 1}
+  m_IndirectSpecularColor: {r: 0.5048852, g: 0.5922587, b: 0.61533225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -563,6 +563,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5188081384444969143, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 881884913}
+    - target: {fileID: 5188081384444969143, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
+      propertyPath: swipeLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188081384444969143, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
+      propertyPath: tileWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188081384444969143, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
+      propertyPath: swipeRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7535079947877688215, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
       propertyPath: gameOverUI
       value: 
@@ -783,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2157386, y: 0.33811772}
   m_AnchorMax: {x: 0.78460795, y: 0.6975589}
-  m_AnchoredPosition: {x: 0.115600586, y: -0.69699097}
+  m_AnchoredPosition: {x: 0.115600586, y: -0.6970215}
   m_SizeDelta: {x: -0.4268036, y: 3.3949013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737307867
@@ -828,6 +844,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737307865}
   m_CullTransparentMesh: 1
+--- !u!4 &881884913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4442292949824776, guid: eea16ef0f58854448aaa9db9257bc84b, type: 3}
+  m_PrefabInstance: {fileID: 485723896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916679971
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49203f242dbbba84fb8f470ca8281cb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 62077c9567e2c5743949cf74531bed2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1225180314
@@ -1342,12 +1363,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.7
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

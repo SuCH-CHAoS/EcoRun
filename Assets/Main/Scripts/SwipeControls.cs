@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwipeControls : MonoBehaviour
 {
-    #region Instance
+    #region Singleton Instance
     private static SwipeControls instance;
     public static SwipeControls Instance
     {
@@ -18,7 +18,6 @@ public class SwipeControls : MonoBehaviour
                     instance = new GameObject("Spawned SwipeControls", typeof(SwipeControls)).GetComponent<SwipeControls>();
                 }
             }
-
             return instance;
         }
         set
@@ -30,34 +29,61 @@ public class SwipeControls : MonoBehaviour
 
     public bool swipeLeft, swipeRight;
 
-    #region public properties
+    #region Public Properties
     public bool SwipeLeft { get { return swipeLeft; } }
     public bool SwipeRight { get { return swipeRight; } }
     #endregion
+
+    private Vector2 touchStartPos;
+    private float swipeThreshold = 50f; // Minimum distance for a valid swipe
 
     private void LateUpdate()
     {
         // Reset swipe directions each frame
         swipeLeft = swipeRight = false;
 
-        // Update keyboard input
-        UpdateKeyboardInput();
+        // Update touch input
+        UpdateTouchInput();
     }
 
-    public void UpdateKeyboardInput()
+    private void UpdateTouchInput()
     {
-        // Check if the A key is pressed (left swipe)
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.touchCount > 0)
         {
-            swipeLeft = true;
-            Debug.Log("Swiped Left (A Key)");
-        }
+            Touch touch = Input.GetTouch(0); // Get the first touch
 
-        // Check if the D key is pressed (right swipe)
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            swipeRight = true;
-            Debug.Log("Swiped Right (D Key)");
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    touchStartPos = touch.position;
+                    Debug.Log("Touch Started at: " + touchStartPos.x);
+                    break;
+
+                case TouchPhase.Moved:
+                    Vector2 touchCurrentPos = touch.position;
+                    float deltaX = touchCurrentPos.x - touchStartPos.x;
+
+                    if (Mathf.Abs(deltaX) > swipeThreshold)
+                    {
+                        if (deltaX > 0)
+                        {
+                            swipeLeft = true; // Swiping right now moves the player **LEFT**
+                            Debug.Log("Swiped Right -> Move Left");
+                        }
+                        else
+                        {
+                            swipeRight = true; // Swiping left now moves the player **RIGHT**
+                            Debug.Log("Swiped Left -> Move Right");
+                        }
+                        // Reset touchStartPos to prevent multiple swipes in a single touch
+                        touchStartPos = touchCurrentPos;
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                    Debug.Log("Touch Ended at: " + touch.position.x);
+                    break;
+            }
         }
     }
 }
